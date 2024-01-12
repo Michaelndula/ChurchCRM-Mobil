@@ -4,67 +4,16 @@ import {
   SafeAreaView,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
   Image,
   Text,
-  Button,
   ScrollView,
   View,
   Pressable,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
-
+import {styles } from '../../../assets/css/Login';
 export default function LoginScreen( {setUserId}) {
-  const styles = StyleSheet.create({
-    img_view: {
-      flex: 1,
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    img: {
-      width: 150,
-      height: 150,
-      // resizeMode: "contain",
-    },
-
-    login_view: {
-      paddingTop: 80,
-      paddingBottom: 80,
-      width: "100%",
-    },
-    login_text: {
-      fontSize: 20,
-      fontFamily: "sans-serif",
-      fontWeight: "900",
-      color: "blue",
-    },
-    inputContainer: {
-      flexDirection: "row",
-      alignItems: "center",
-      borderWidth: 1,
-      borderColor: "white",
-      backgroundColor: "gray",
-      borderRadius: 5,
-      padding: 10,
-      marginTop: 20,
-    },
-    input: {
-      flex: 1,
-      marginLeft: 10,
-    },
-    iconContainer: {
-      position: "absolute",
-      right: 10,
-    },
-    icon: {
-      width: 20,
-      height: 20,
-      // resizeMode: "contain",
-    },
-  });
-
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -72,11 +21,8 @@ export default function LoginScreen( {setUserId}) {
   };
   const navigation = useNavigation();
   
-  const ProfileScreen = () => {
-    navigation.navigate("ProfileScreen");
-  };
-  const SettingScreen = () => {
-    navigation.navigate("SettingScreen");
+  const Resetpassword = () => {
+    navigation.navigate("ResetPasswordScreen");
   };
 
   //Auth functionality
@@ -173,10 +119,7 @@ export default function LoginScreen( {setUserId}) {
             >
               Forgot password?
             </Text>
-            <Text onPress={ProfileScreen}>ProfileScreen</Text>
-            <Text style={{ marginTop: 20 }} onPress={SettingScreen}>
-              SettingScreen
-            </Text>
+            <Text onPress={Resetpassword}>Reset Password</Text>
           </SafeAreaView>
         </View>
       </ScrollView>

@@ -3,9 +3,6 @@ import {
   View,
   ScrollView,
   Text,
-  Image,
-  ImageBackground,
-  StyleSheet,
   Switch,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";

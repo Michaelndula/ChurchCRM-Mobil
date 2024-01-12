@@ -1,5 +1,4 @@
 import React from 'react';
-import Video from 'react-native-video';
 
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 
